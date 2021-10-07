@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "818752611141",
+    "project_id": "ganinterview",
+    "storage_bucket": "ganinterview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818752611141:android:f6e381d7365d7f2392d42c",
+        "android_client_info": {
+          "package_name": "com.gan.gbooks.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818752611141-q2i3453a764tn7kg5m0jbi8nf0la8up8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9CYK-FqcbaVEAKshTOeZ86IBbjIjBUMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818752611141-q2i3453a764tn7kg5m0jbi8nf0la8up8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

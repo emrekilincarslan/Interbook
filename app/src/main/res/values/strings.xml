@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Permissions    -->
+    <string name="permission_rationale_title">Needs permission</string>
+    <string name="call_permission_rationale">Allow %s to make and manage phone calls</string>
+
+    <!--    Intro    -->
+    <string name="tv_intro_register">Register</string>
+    <string name="tv_intro_policy"><u>What is project about</u></string>
+    <string name="tv_intro_question">Are you already registered?</string>
+    <string name="tv_intro_login">Login</string>
+
+    <!-- Warning Agreement-->
+    <string name="tv_warning_label">Your country doesnt support google Books</string>
+    <string name="tv_warning_titles">Google Books respects copyright, contract, and other legal restrictions associated with the end user\'s location. As a result, some users might not be able to access book content from certain countries. For example, certain books are previewable only in the United States; we omit such preview links for users in other countries. Therefore, the API results are restricted based on your server or client application\'s IP address.</string>
+    <string name="check_agreed_terms">Agreed</string>
+
+    <string name="btn_submit">Submit</string>
+
+    <!--    Error messages    -->
+    <string name="text_error">Something went wrong</string>
+
+    <!--    Info    -->
+    <string name="text_ok" translatable="false">OK</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="text_info" translatable="false">Info</string>
+
+    <!--    Bottom navigation    -->
+    <string name="nav_home">Search</string>
+    <string name="nav_book">Book</string>
+    <string name="nav_trips">Trips</string>
+    <string name="nav_more">More</string>
+
+    <!--    More    -->
+    <string name="tv_privacy_policy">Privacy policy</string>
+    <string name="tv_help_question" translatable="false">Do you need help? Call</string>
+
+    <!--    Home    -->
+    <string name="search_book">Search Book</string>
+
+    <string name="app_name">InterBook</string>
+    <string name="books_empty_message">Your search is empty or no result.</string>
+
+</resources>

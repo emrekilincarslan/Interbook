@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_horizontal_padding">16dp</dimen>
+
+    <dimen name="default_scroll_top_padding">30dp</dimen>
+    <dimen name="default_bottom_padding">10dp</dimen>
+
+    <dimen name="list_empty_state_top_margin">50dp</dimen>
+
+    <dimen name="default_icon_size">24dp</dimen>
+    <dimen name="default_vertical_margin">20dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="bottom_buttons_screen_edge_margin">2dp</dimen>
+
+    <dimen name="header_text_size">18sp</dimen>
+    <dimen name="buttons_text_size">@dimen/header_text_size</dimen>
+    <dimen name="titles_text_size">@dimen/header_text_size</dimen>
+    <dimen name="big_header_text_size">24sp</dimen>
+    <dimen name="default_text_size">14sp</dimen>
+</resources>

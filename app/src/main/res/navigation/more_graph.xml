@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/more"
+    app:startDestination="@id/more_screen">
+
+    <fragment
+        android:id="@+id/more_screen"
+        android:name="com.gan.interbook.presentation.main.more.MoreFragment"
+        android:label="@string/nav_more"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_more_screen_to_policy_screen"
+            app:destination="@id/policy_screen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/policy_screen"
+        android:name="com.gan.interbook.presentation.common.fragment.PolicyFragment"
+        android:label="@string/tv_privacy_policy"
+        tools:layout="@layout/fragment_policy" />
+</navigation>

@@ -1,0 +1,83 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Interbook" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/selected_bottom_navigation</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/clickable_elements</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/non_selected_bottom_navigation</item>
+        <item name="colorError">@color/errors</item>
+
+        <item name="android:colorBackground">@color/main_background</item>
+
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:fontFamily">@font/main</item>
+
+        <item name="android:statusBarColor">@color/splash_background</item>
+    </style>
+
+    <style name="Theme.Interbook.Auth">
+        <item name="android:windowBackground">@color/splash_background</item>
+        <item name="android:colorBackground">@color/splash_background</item>
+        <item name="colorPrimary">@color/clickable_elements</item>
+        <item name="colorPrimaryDark">@color/splash_background</item>
+    </style>
+
+    <style name="InterbookPrimaryButton" parent="AccentElementsText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ripple_button_primary</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:paddingStart">50dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingEnd">50dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/clickable_elements_text</item>
+    </style>
+
+    <style name="InterbookPrimaryButton.Clear">
+        <item name="android:background">@drawable/ripple_button_clear</item>
+        <item name="android:textColor">@color/main_text</item>
+    </style>
+
+    <style name="InterbookPrimaryButton.Attention">
+        <item name="android:background">@drawable/ripple_button_attention</item>
+    </style>
+
+    <style name="MoreButtons" parent="AccentElementsText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:paddingStart">@dimen/screen_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/screen_horizontal_padding</item>
+    </style>
+
+    <style name="InterbookPrimaryButton.Help">
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="TripIcons">
+        <item name="android:layout_height">@dimen/default_icon_size</item>
+        <item name="android:layout_width">@dimen/default_icon_size</item>
+        <item name="tint">@color/trip_icons</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="ScreenHeaderText">
+        <item name="android:textSize">@dimen/big_header_text_size</item>
+        <item name="android:fontFamily">@font/accent</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="AccentElementsText">
+        <item name="android:textSize">@dimen/header_text_size</item>
+        <item name="android:fontFamily">@font/accent</item>
+    </style>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.gan.interbook.presentation.auth.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+
+        <action
+            android:id="@+id/action_splashScreen_to_introFragment"
+            app:destination="@id/introFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/auth_nav_graph" />
+
+        <action
+            android:id="@+id/action_splashScreen_to_addServiceFragment"
+            app:destination="@id/warUserFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/auth_nav_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.gan.interbook.presentation.auth.fragments.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro">
+
+        <action
+            android:id="@+id/action_introFragment_to_addServiceFragment"
+            app:destination="@id/warUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/auth_nav_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="com.gan.interbook.presentation.common.fragment.PolicyFragment"
+        android:label="PolicyFragment"
+        tools:layout="@layout/fragment_policy" />
+
+    <action
+        android:id="@+id/action_global_policyFragment"
+        app:destination="@id/policyFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out" />
+
+    <action
+        android:id="@+id/action_global_to_introFragment"
+        app:destination="@id/introFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        app:popUpTo="@id/auth_nav_graph" />
+
+    <fragment
+        android:id="@+id/warUserFragment"
+        android:name="com.gan.interbook.presentation.auth.fragments.WarnUserFragment"
+        android:label="warnUserFragment"
+        tools:layout="@layout/fragment_warn_user" />
+</navigation>

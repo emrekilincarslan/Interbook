@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gan.interbook.presentation.auth.viewmodel.WarnUserViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_add_service_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/header_authorize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ScrollView
+            android:id="@+id/add_service_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_add_service_header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/default_bottom_padding">
+
+                <TextView
+                    android:id="@+id/tv_add_service_insurance_id_label"
+                    style="@style/AccentElementsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/tv_warning_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_add_service_birth_date"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/screen_horizontal_padding"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginEnd="@dimen/screen_horizontal_padding"
+                    android:scrollbars="vertical"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="@string/tv_warning_titles"
+                    app:layout_constraintBottom_toTopOf="@+id/textSubmit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_add_service_insurance_id_label" />
+                <CheckBox
+                    android:id="@+id/tv_guide"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textColor="@color/md_red_500"
+                    android:text="@string/check_agreed_terms"
+                    android:checked="@={viewModel.boxClicked}"
+                    app:layout_constraintBottom_toTopOf="@+id/textSubmit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_add_service_birth_date"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_add_service_birth_date" />
+                <TextView
+                    android:id="@+id/textSubmit"
+                    style="@style/InterbookPrimaryButton"
+                    android:layout_marginStart="@dimen/screen_horizontal_padding"
+                    android:layout_marginEnd="@dimen/screen_horizontal_padding"
+                    android:layout_marginBottom="150dp"
+                    android:enabled="@{viewModel.submitEnabled}"
+                    android:onClick="@{() -> viewModel.submitClicked()}"
+                    android:text="@string/btn_submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:enabled="false" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

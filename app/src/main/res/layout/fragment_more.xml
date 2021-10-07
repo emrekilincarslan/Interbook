@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gan.interbook.presentation.main.more.MoreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_more_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/header_short"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/ScreenHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:layout_marginTop="10dp"
+            android:text="@{viewModel.screenTitleText}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="User name" />
+
+        <View
+            android:id="@+id/button_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/colorSurface"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_more_version"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_more_privacy_policy" />
+
+        <ImageView
+            android:id="@+id/iv_more_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="@dimen/screen_horizontal_padding"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_more_privacy_policy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_more_privacy_policy"
+            app:tint="@color/main_text"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_more_privacy_policy"
+            style="@style/MoreButtons"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="@{() -> viewModel.privacyClicked()}"
+            android:paddingStart="62dp"
+            android:text="@string/tv_privacy_policy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_more_header"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vertical_divider_one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:background="@color/dividers"
+            app:layout_constraintBottom_toBottomOf="@id/tv_more_privacy_policy" />
+
+        <ImageView
+            android:id="@+id/iv_more_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="@dimen/screen_horizontal_padding"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_more_logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_more_logout"
+            app:tint="@color/main_text"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_more_logout"
+            style="@style/MoreButtons"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="@{() -> viewModel.logoutClicked()}"
+            android:paddingStart="62dp"
+            android:text="@string/tv_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vertical_divider_one"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vertical_divider_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:background="@color/dividers"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_more_logout" />
+
+        <TextView
+            android:id="@+id/tv_more_version"
+            style="@style/MoreButtons"
+            android:paddingStart="62dp"
+            android:text="@{viewModel.versionText}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vertical_divider_two"
+            tools:ignore="RtlSymmetry"
+            tools:text="@string/tv_version" />
+
+        <View
+            android:id="@+id/vertical_divider_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:background="@color/dividers"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_more_version" />
+
+        <ImageView
+            android:id="@+id/iv_more_icon_assistant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_question"
+            app:layout_constraintBottom_toTopOf="@+id/tv_more_need_help"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/vertical_divider_three"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:tint="@color/help_icons"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_more_need_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_help_question"
+            app:layout_constraintBottom_toTopOf="@+id/tv_more_help_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_more_icon_assistant" />
+
+        <TextView
+            android:id="@+id/tv_more_help_phone"
+            style="@style/InterbookPrimaryButton.Help"
+            android:onClick="@{() -> viewModel.callCLicked()}"
+            android:text="@{viewModel.callButtonText}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_more_need_help"
+            tools:text="@string/tv_support_phone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

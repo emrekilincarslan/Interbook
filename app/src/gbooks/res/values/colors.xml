@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_text">@color/black</color>
+    <color name="main_background">#fdf1db</color>
+    <color name="clickable_elements">#ec6607</color>
+    <color name="clickable_elements_text">@color/white</color>
+    <color name="dividers">#D4E7FF</color>
+    <color name="follow_the_driver">@color/dividers</color>
+    <color name="trip_icons">#0074D9</color>
+    <color name="help_icons">@color/trip_icons</color>
+    <color name="book_a_trip_header">#fbba00</color>
+    <color name="splash_background">#fbba00</color>
+    <color name="book_a_trip_icons">@color/clickable_elements_text</color>
+    <color name="book_a_trip_text">@color/book_a_trip_icons</color>
+    <color name="header_text">@color/clickable_elements_text</color>
+
+    <color name="cancel">#D0021B</color>
+    <color name="errors">@color/cancel</color>
+
+    <color name="non_selected_bottom_navigation">#959594</color>
+    <color name="selected_bottom_navigation">@color/main_text</color>
+
+<!-- Travel plans -->
+    <color name="travel_plan_available_text">@color/main_text</color>
+    <color name="travel_plan_available_background">#D4E7FF</color>
+    <color name="travel_plan_unavailable_text">#666666</color>
+    <color name="travel_plan_unavailable_background">#DEDEDD</color>
+
+<!-- Trip statuses -->
+    <color name="trip_status_confirmed_text">@color/main_text</color>
+    <color name="trip_status_confirmed_background">#D4E7FF</color>
+    <color name="trip_status_billed_text">@color/main_text</color>
+    <color name="trip_status_billed_background">#A0ACBD</color>
+    <color name="trip_status_cancelled_text">@color/main_text</color>
+    <color name="trip_status_cancelled_background">#E2C0CC</color>
+    <color name="trip_status_rejected_text">@color/main_text</color>
+    <color name="trip_status_rejected_background">#BDA5AD</color>
+    <color name="trip_status_no_show_text">@color/white</color>
+    <color name="trip_status_no_show_background">#D6272C</color>
+
+<!-- Travel statuses -->
+    <color name="travel_status_driver_on_text">@color/white</color>
+    <color name="travel_status_driver_on_background">#53a0fd</color>
+    <color name="travel_status_heading_text">@color/white</color>
+    <color name="travel_status_heading_background">#ec6607</color>
+    <color name="travel_status_arrived_text">@color/white</color>
+    <color name="travel_status_arrived_background">#A6ABBD</color>
+
+<!-- Map overlays add 75% alpha to the view -->
+    <color name="arrived_overlay_text">#0E3455</color>
+    <color name="arrived_overlay_background">#A6ABBD</color>
+    <color name="no_data_overlay_text">@color/white</color>
+    <color name="no_data_overlay_background">@color/trip_status_no_show_background</color>
+</resources>

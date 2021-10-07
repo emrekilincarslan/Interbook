@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gan.interbook.presentation.main.home.viewmodel.BaseSearchViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_trips_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl_trips_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|snap">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/md_transparent"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    app:layout_scrollFlags="scroll|snap"
+                    app:query="@{viewModel.query}"
+                    app:queryHint="@string/search_book"
+                    app:queryTextListener="@{viewModel.onQueryTextListener}" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@{viewModel.headerImage}"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/header_short" />
+            </FrameLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_books_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:swipeRefreshLayoutProgressSpinnerBackgroundColor="?attr/colorSecondary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/AccentElementsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/screen_horizontal_padding"
+                    android:layout_marginTop="@dimen/list_empty_state_top_margin"
+                    android:layout_marginEnd="@dimen/screen_horizontal_padding"
+                    android:gravity="center"
+                    android:text="@{viewModel.noBooksText}"
+                    app:visibility="@{viewModel.noBooksVisibility}"
+                    tools:text="@string/history_empty_message" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_books_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_support_phone">Call %s</string>
+
+    <!--    Intro    -->
+    <string name="tv_intro_header">Enjoy with GBOOKS</string>
+    <string name="tv_intro_description">Do you have an indication to joy with GBOOKS? Register to read books.</string>
+
+    <!--    More    -->
+    <string name="tv_logout">Logout of GBOOKS</string>
+    <string name="tv_version" translatable="false">GBOOKS %s</string>
+</resources>

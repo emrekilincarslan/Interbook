@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gan.interbook.presentation.main.home.details.viewmodel.BookViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface">
+
+        <ImageView
+            android:id="@+id/iv_book_header"
+            android:layout_width="250dp"
+            android:layout_height="328dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:elevation="2dp"
+            android:textSize="15sp"
+            android:src="@drawable/header_short"
+            app:bookImage="@{viewModel.bookHeaderUrl}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_trip_title"
+            style="@style/ScreenHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:layout_marginTop="@dimen/default_vertical_margin"
+            android:elevation="2dp"
+            android:text="@{viewModel.bookTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_book_header" />
+
+        <TextView
+            android:id="@+id/tv_released"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.released}"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_trip_title" />
+        <TextView
+            android:id="@+id/tv_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.authors}"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_released" />
+
+        <TextView
+            android:id="@+id/tv_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.publisher}"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_authors" />
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.language}"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_publisher" />
+        <TextView
+            android:id="@+id/tv_previewLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.previewLink}"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_language" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

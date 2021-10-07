@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gan.interbook.presentation.main.home.viewmodel.BookItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:onClick="@{() -> viewModel.itemClicked()}"
+        android:paddingBottom="@dimen/default_vertical_margin">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_padding"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_book_cover"
+            style="@style/TripIcons"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:layout_marginTop="@dimen/default_vertical_margin"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_book_name"
+            style="@style/AccentElementsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_padding"
+            android:layout_marginTop="2dp"
+            android:text="@{viewModel.bookName}"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_book_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_book_cover"
+            app:layout_constraintTop_toTopOf="@+id/iv_book_cover"
+            tools:text="January 26 - March 26, 2021" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_book_cover,tv_book_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
