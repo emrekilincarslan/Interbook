@@ -2,13 +2,8 @@
 
 [![N|Solid](https://koenig-media.raywenderlich.com/uploads/2019/06/layers-architecture.png)](https://nodesource.com/products/nsolid)
 
-
-DateTimePicker is a cool dialog for getting date and time at the same time 
-  - Easy To use
-  - Easy To  implement
-  - Magic :) 
   
-  ### JitPackComphonents
+  ### JetPackComphonents
    I used as an architecture 
       Databinding
       lifecycles
